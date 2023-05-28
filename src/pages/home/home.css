@@ -1,8 +1,10 @@
-.posterImage{
+.posterImage {
     height: 600px;
+    opacity: 0.75;
+    background-image: linear-gradient(to right, rgb(0, 0, 0), rgba(0, 0, 0, 0));
 }
 
-.posterImage > img {
+.posterImage>img {
     margin: auto;
     display: block;
     width: 100%;
@@ -18,10 +20,10 @@
     width: 100%;
     justify-content: flex-end;
     align-items: flex-start;
-    background-image: linear-gradient(rgb(0,0,0,0), rgb(0,0,0,1));
+    background-image: linear-gradient(rgb(0, 0, 0, 0), rgb(0, 0, 0, 1));
     opacity: 1;
     transition: opacity .3s;
-}   
+}
 
 .posterImage__overlay:hover {
     opacity: 1;
@@ -50,4 +52,55 @@
     display: flex;
     text-align: left;
     width: 50%;
+}
+
+.control-dots {
+    display: none;
+}
+
+.left-gradient {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background-image: linear-gradient(to right, rgb(0, 0, 0), rgba(0, 0, 0, 0));
+}
+
+@media screen and (max-width:600px) {
+    .posterImage__overlay {
+        bottom: -6px;
+        width: unset;
+    }
+
+    .posterImage {
+        height: unset;
+    }
+
+    .posterImage__title {
+        font-size: 3rem;
+    }
+
+    .posterImage__runtime {
+        font-size: 1.2rem;
+    }
+
+    .posterImage__description {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width:450px) {
+
+    .posterImage__title {
+        font-size: 1rem;
+    }
+
+    .posterImage__description {
+        font-size: 0.4rem;
+    }
+
+    .posterImage__description {
+        width: 100%;
+    }
 }

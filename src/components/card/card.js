@@ -17,13 +17,13 @@ const Cards = ({movie}) => {
     {
         isLoading
         ?
-        <div className="cards">
+        <div className="cards width-25">
             <SkeletonTheme color="#202020" highlightColor="#444">
                 <Skeleton height={300} duration={2} />
             </SkeletonTheme>
         </div>
         :
-        <Link to={`/movie/${movie.id}`} style={{textDecoration:"none", color:"white"}}>
+        <Link to={`/movie/${movie.id}`} className="swiper-slide" style={{textDecoration:"none", color:"white"}}>
             <div className="cards">
                 <img className="cards__img" src={`https://image.tmdb.org/t/p/original${movie?movie.poster_path:""}`} />
                 <div className="cards__overlay">

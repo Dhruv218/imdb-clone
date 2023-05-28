@@ -1,5 +1,4 @@
 .header {
-    margin: 0 2.5rem;
     padding: .5rem 0;
     align-items: center;
     display: flex;
@@ -32,3 +31,17 @@ a > span:hover {
     font-size: 2rem;
 }
 
+@media screen and (max-width:450px) {
+   a > span {
+        font-size: 0.8rem;
+        cursor: pointer;
+        color: white;
+        margin: 0;
+        margin-right: 13px;
+        white-space: nowrap;
+   }
+   .header__icon{
+    width: 60px;
+    margin-right: 13px;
+   }
+}

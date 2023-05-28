@@ -3,12 +3,45 @@
 }
 
 .list__title {
-font-size: 1.75rem;
-margin:  2.5rem;
+    font-size: 1.75rem;
+    margin: 2.5rem;
 }
 
 .list__cards {
     display: flex;
-    flex-wrap: wrap ;
+    flex-wrap: wrap;
     justify-content: center;
+}
+
+@media (min-width: 600px) {
+    .swiper-slide {
+        max-width: 33.33%;
+    }
+}
+
+@media (min-width: 900px) {
+    .swiper-slide {
+        max-width: 25%;
+    }
+}
+
+@media (min-width: 1200px) {
+    .swiper-slide {
+        max-width: 25%;
+    }
+}
+@media (max-width: 600px) {
+    .swiper-slide {
+        max-width: 245px;
+    }
+    .list__cards{
+        flex-wrap: nowrap;
+        overflow: scroll;
+        justify-content: unset;
+    }
+}
+@media screen and (max-width:750px) {
+    .movie__list{
+        padding: 0rem 0.5rem 0.5rem 0.5rem;
+    }
 }
